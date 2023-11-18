@@ -3,4 +3,7 @@ fkdaklfda
 
 rartattatakfdhsjkha
 
-gen newvar
+gen young = 1 if age_ref <= 30
+replace young = 0 if empty(young)
+
+ttest young by(age_ref)
